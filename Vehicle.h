@@ -7,6 +7,8 @@ struct Vehicle
 {
     Vehicle(const std::string& n) : name(n) { }
     
+    virtual ~Vehicle() { }
+
     virtual void setSpeed(int s)
     {
         std::cout << "\nHighway is adjusting " << name << "'s speed to " << s << " mph" << std::endl;
@@ -21,4 +23,6 @@ struct Vehicle
 protected:
     int speed = 0;
     std::string name;
+private:
+    friend struct HighwayPatrol;
 };
