@@ -17,6 +17,6 @@ void SemiTruck::pushToLimits()
 void SemiTruck::setSpeed(int s)
 {
     speed = s;
-    std::cout << "High is adjusting " << name << "'s speed to " << speed << " mph" << std::endl;
+    std::cout << "Highway is adjusting " << name << "'s speed to " << speed << " mph" << std::endl;
     std::cout << "This track is so difficult to drive!" << std::endl;
 }
