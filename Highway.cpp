@@ -19,15 +19,15 @@ void Highway::addVehicleInternal(Vehicle* v)
 {
     if (auto* car = dynamic_cast<Car*>(v))
     {
-        car -> closeWindows();
+        car->closeWindows();
     }
     else if (auto* motorcycle = dynamic_cast<Motorcycle*>(v))
     {
-        motorcycle -> lanesplitAndRace();
+        motorcycle->lanesplitAndRace();
     }
     else if (auto* semiTruck = dynamic_cast<SemiTruck*>(v))
     {
-        semiTruck -> pushToLimits();        
+        semiTruck->pushToLimits();        
     }
     else std::cout << "Wrong type of vehicle!" << std::endl;
 }
@@ -36,15 +36,15 @@ void Highway::removeVehicleInternal(Vehicle* v)
 {
     if (auto* car = dynamic_cast<Car*>(v))
     {
-        car -> tryToEvade();
+        car->tryToEvade();
     }
     else if (auto* motorcycle = dynamic_cast<Motorcycle*>(v))
     {
-        motorcycle -> tryToEvade();
+        motorcycle->tryToEvade();
     }
     else if (auto* semiTruck = dynamic_cast<SemiTruck*>(v))
     {
-        semiTruck -> slowDown();
+        semiTruck->slowDown();
     }
     else std::cout << "Wrong type of vehicle!" << std::endl;
 }
